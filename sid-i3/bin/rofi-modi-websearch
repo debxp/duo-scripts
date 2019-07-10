@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+sources_file="$HOME/.local/bin/rofi-websearch-sources"
+message="Seletores disponíveis..."
+
+se_data="$( 
+    awk -F'"' '
+    BEGIN {
+        labels=""
+    }
+    {
+        # Selector line
+        gsub(/[[:space:]]/,"",$1)
+        sel=$1
+        
+        # Description line
+        dsc=$2
+        
+        # URL line
+        gsub(/[[:space:]]/,"",$3)
+        url=$3
+        
+        # URL array (selector is the key)
+        surl[sel]=url
+        
+        # Descriptions array (selector is the key)
+        sdsc[sel]=dsc
+        
+        labels=sprintf ("%s\n%s - %s", labels, sel, dsc)
+    }
+    END {
+        for(k in surl) {
+            print "declare -A " k
+            print k "[url]=\"" surl[k] "\""
+            print k "[dsc]=\"" sdsc[k] "\""
+        }
+        print "rofi_labels=\"" labels "\""
+    }
+    ' "$sources_file"
+)";
+
+# Eval awk output as real variables...
+eval "$se_data"
+
+if [[ -z "$@" ]]; then
+    # Output label string to rofi...
+    echo "$message$rofi_labels"
+else
+    sel="$( awk '{ print tolower($1) }' <<< $@ )"
+    txt="$( cut -d" " -f2- <<< $@ )"
+
+    eval "sen_dsc=\"\${$sel[dsc]}\""
+    eval "sen_url=\"\${$sel[url]}\""
+    
+    xdg-open "$sen_url$txt" &>/dev/null &
+fi

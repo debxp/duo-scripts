@@ -1,0 +1,44 @@
+# i3blocks config file
+
+# List of valid properties:
+
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+
+command=/usr/share/i3blocks/$BLOCK_NAME
+separator_block_width=20
+markup=pango
+color=#88C0D0
+
+# modules
+
+[keyindicator]
+instance=CAPS
+interval=once
+signal=11
+command=~/.config/i3blocks/keyindicator
+
+[volume]
+instance=Master
+interval=once
+command=~/.config/i3blocks/module-volume
+signal=10
+
+[module-calendar]
+interval=60
+command=~/.config/i3blocks/module-calendar
+

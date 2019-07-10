@@ -7,5 +7,4 @@ sudo apt install apt-listchanges \
                  firmware-misc-nonfree \
                  firmware-linux-nonfree \
                  firmware-atheros \
-                 git \
                  curl
