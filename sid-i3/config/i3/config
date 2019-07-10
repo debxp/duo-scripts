@@ -222,8 +222,6 @@ client.urgent            $red    $red    $dark      $cyan      $red
 # status bar ----------------------------------------------------------------- #
 
 bar {
-        $out_pri
-        
         position bottom
         wheel_up_cmd nop
         wheel_down_cmd nop
