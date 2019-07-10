@@ -43,14 +43,14 @@ echo -e "Copiando fontes e papéis de parede..."
 
 cp -R artwork/wallpapers "$HOME/pictures/"
 
-sudo cp -R artwork/mac-fonts /usr/share/fonts/truetype/
+sudo cp -R artwork/fonts/mac-fonts /usr/share/fonts/truetype/
 
 # set default wallpaper
 
 echo -e "Aplicando papel de parede..."
 
-sed -i "s/USER/$USER/g" nitrogen.cfg
-sed -i "s/USER/$USER/g" bg-saved.cfg 
+sed -i "s/USER/$USER/g" $HOME/.config/nitrogen/nitrogen.cfg
+sed -i "s/USER/$USER/g" $HOME/.config/nitrogen/bg-saved.cfg 
 
 echo -e "\nPronto!\n"
 
