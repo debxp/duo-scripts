@@ -3,7 +3,7 @@
 # Audio/music production
 
 sudo apt install audacity \
-                 musescore \
+                 musescore3 \
                  lmms \
                  hydrogen \
                  soundconverter
