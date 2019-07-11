@@ -2,9 +2,9 @@
 
 ## Atenção! 
 
-Estes scripts pressupõem uma instalação sem qualquer ambiente de trabalho ou gerenciador de janelas.
+Estes scripts pressupõem uma instalação nova e sem qualquer ambiente de trabalho ou gerenciador de janelas.
 
-Ao final, após um reboot, deve ser possível entrar no i3wm com o comando `startx` depois de fazer o login.
+Ao final, após um reboot, deve ser possível entrar no i3wm automaticamente depois do login.
 
 ## Requisitos
 
@@ -35,5 +35,14 @@ git clone https://github.com/debxp/duo-scripts.git
 ```
 
 Os demais scripts são opcionais.
+
+3. Reinicie a máquina com o comando abaixo:
+
+```
+sudo reboot
+```
+
+4. Faça o login e o i3 deverá iniciar automaticamente.
+
 
 
