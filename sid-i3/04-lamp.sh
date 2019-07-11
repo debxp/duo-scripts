@@ -29,6 +29,7 @@ sudo mysql_secure_installation
 
 # Habilita mod rewrite no Apache
 sudo a2enmod rewrite
+sudo systemctl restart apache2.service
 
 # Instalação do Composer
 echo -e "\nComposer install...\n"
