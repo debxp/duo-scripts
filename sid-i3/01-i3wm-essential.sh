@@ -51,3 +51,4 @@ sudo apt install xorg \
                  pavucontrol \
                  yad
 
+echo "[[ -z \$DISPLAY && \$XDG_VTNR -eq 1 ]] && exec startx" > "$HOME/.bash_profile"
