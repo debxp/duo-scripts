@@ -24,10 +24,11 @@ sudo apt install apache2 \
 
 
 # Secure MariaDB server
-
 echo -e "\nSecure database server...\n"
 sudo mysql_secure_installation
 
+# Habilita mod rewrite no Apache
+sudo a2enmod rewrite
 
 # Instalação do Composer
 echo -e "\nComposer install...\n"
