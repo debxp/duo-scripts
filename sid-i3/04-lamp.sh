@@ -24,12 +24,18 @@ sudo apt install apache2 \
 
 
 # Secure MariaDB server
-echo -e "\nSecure database server...\n"
+echo -e "\nSecure database server..."
 sudo mysql_secure_installation
 
 # Habilita mod rewrite no Apache
+echo -e "\nEnabling Apache mod rewrite..."
 sudo a2enmod rewrite
 sudo systemctl restart apache2.service
+
+# Cria pasta public_html do usuário...
+echo -e "\nCreating local public_html..."
+mkdir "$HOME/public_html"
+sudo ln -s "$HOME/public_html" "/var/www/html/$USER"
 
 # Instalação do Composer
 echo -e "\nComposer install...\n"
