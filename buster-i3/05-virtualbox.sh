@@ -7,7 +7,7 @@ sudo usermod -aG vboxusers $USER
 groups $USER
 
 tput setaf 3
-echo -e "\nPara adicionar a Extension Pack, visite a URL:
+echo -e "\nPara adicionar a Extension Pack, visite
 https://www.virtualbox.org/wiki/Downloads
 e baixe a opção adequada para a sua versão do VirtualBox."
 tput sgr0
