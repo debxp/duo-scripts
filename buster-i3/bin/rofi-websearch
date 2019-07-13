@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+# Options ----------------------------------------------------------------------
+sources_file="$HOME/.local/bin/rofi-websearch-sources"
+prompt="Buscar na web"
+message="Seletores disponíveis..."
+# theme="$HOME/.config/rofi/themes/debxp-center.rasi"
+#
+# TODO: default_engine="dd"
+# TODO: open_with="xdg-open"
+#
+# End options ------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# GAWK processing...
+#
+# Input format : selector "description" url
+# Output format: declare -A selector
+#                selector[url]="url"
+#                selector[decription]="description"
+#                + labels string for rofi
+# ------------------------------------------------------------------------------
+
+se_data="$( 
+    awk -F'"' '
+    BEGIN {
+        labels=""
+    }
+    {
+        # Selector line
+        gsub(/[[:space:]]/,"",$1)
+        sel=$1
+        
+        # Description line
+        dsc=$2
+        
+        # URL line
+        gsub(/[[:space:]]/,"",$3)
+        url=$3
+        
+        # URL array (selector is the key)
+        surl[sel]=url
+        
+        # Descriptions array (selector is the key)
+        sdsc[sel]=dsc
+        
+        labels=sprintf ("%s\n%s - %s", labels, sel, dsc)
+    }
+    END {
+        for(k in surl) {
+            print "declare -A " k
+            print k "[url]=\"" surl[k] "\""
+            print k "[dsc]=\"" sdsc[k] "\""
+        }
+        print "rofi_labels=\"" labels "\""
+    }
+    ' "$sources_file"
+)";
+
+# Eval awk output as real variables...
+eval "$se_data"
+
+# Output label string to rofi...
+search="$(rofi -dmenu -p "$prompt" <<< "$message$rofi_labels")"
+
+# Retrieve data...
+sel="$( awk '{ print tolower($1) }' <<< $search )"
+txt="$( cut -d" " -f2- <<< $search )"
+
+eval "sen_dsc=\"\${$sel[dsc]}\""
+eval "sen_url=\"\${$sel[url]}\""
+
+# Test -------------------------------------------------------------------------
+# clear
+# echo "Rofi output: $search"
+# echo "Selector   : $sel"
+# echo "Expression : $txt"
+# echo "Engine     : $sen_dsc"
+# echo "URL        : $sen_url$txt"
+# End test ---------------------------------------------------------------------
+
+xdg-open "$sen_url$txt" &>/dev/null &
+
+exit 0

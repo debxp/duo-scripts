@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+sel=$(wmctrl -lx | \
+      sed -e 's/\./ /g' | \
+      awk '{print $4}' | \
+      dmenu -l 15)
+      
+win=$(awk '{print $NF}' <<< $sel)
+
+eval "i3-msg '[class="$win"] focus'" &>/dev/null
+
+exit 0

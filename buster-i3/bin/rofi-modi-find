@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+ROOT_PATH=$HOME
+
+if [[ -z "$@" ]]; then
+    find $ROOT_PATH -type d | sed 's|^'$ROOT_PATH/'||'
+else
+    pcmanfm "$@" &>/dev/null &
+fi

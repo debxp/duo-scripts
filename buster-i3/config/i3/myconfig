@@ -1,0 +1,429 @@
+# init ----------------------------------------------------------------------- #
+
+# mod key (Alt=Mod1, Super=Mod4)
+set $mod Mod4
+
+# bindsym shortener
+set $sup bindsym Mod4
+
+# exec shortener
+set $exe        exec --no-startup-id
+set $exe_always exec_always --no-startup-id
+
+# user local bin path (usually '~/bin' or '~/.local/bin')
+set $bin_path ~/.local/bin
+
+# direction keys
+set $ukey Up
+set $dkey Down
+set $lkey Left
+set $rkey Right
+
+# my desktop monitor output
+set $out_pri output HDMI-1
+set $out_sec output VGA-1
+
+# my notebook monitor output
+# set $out_pri output VGA-1
+# set $out_sec output LVDS-1
+# set $out_pri output LVDS-1
+
+# pulseaudio sink (my notebook=0, my desktop=1)
+set $pa_sink 0
+
+# default mail client
+set $default_mail ~/.local/bin/launcher-thunderbird
+
+# session control ------------------------------------------------------------ #
+
+$sup+Shift+c                 reload
+$sup+Shift+r                 restart
+
+$sup+Shift+F12               $exe $bin_path/dmenu-i3-logout
+
+# terminal ------------------------------------------------------------------- #
+
+$sup+Return                  $exe i3-sensible-terminal
+
+# focus ---------------------------------------------------------------------- #
+
+focus_follows_mouse no
+focus_wrapping no
+
+$sup+$lkey                   focus left
+$sup+$dkey                   focus down
+$sup+$ukey                   focus up
+$sup+$rkey                   focus right
+
+$sup+Prior                   focus parent
+$sup+Next                    focus child
+
+# splitting ------------------------------------------------------------------- #
+
+$sup+semicolon               split toggle
+
+# layout switching ----------------------------------------------------------- #
+
+$sup+slash                   layout toggle splitv splith
+$sup+Shift+question          layout toggle all
+$sup+F11                     fullscreen toggle
+
+# floating ------------------------------------------------------------------- #
+
+floating_modifier Mod1
+
+$sup+period                  floating toggle
+$sup+comma                   focus mode_toggle
+
+# moving --------------------------------------------------------------------- #
+
+$sup+Shift+$lkey             move left
+$sup+Shift+$dkey             move down
+$sup+Shift+$ukey             move up
+$sup+Shift+$rkey             move right
+
+# resizing ------------------------------------------------------------------- #
+
+$sup+Control $rkey           resize grow   width  5 px or 5 ppt
+$sup+Control $lkey           resize shrink width  5 px or 5 ppt
+$sup+Control $ukey           resize grow   height 5 px or 5 ppt
+$sup+Control $dkey           resize shrink height 5 px or 5 ppt
+
+# icons ---------------------------------------------------------------------- #
+
+# editor       
+# menu         
+# document     
+# table        
+# code         
+# chat         
+# news         
+# monitor      
+# firefox      
+# chrome       
+# terminal     
+# window       
+# github       
+# whatsapp     
+# telegram     
+# hangout      
+# bank         
+# folder       
+# package      
+#
+# no preview...
+#
+# volume
+# play
+# music
+# video
+# email
+
+set $ico_bank     <span font='Font Awesome'>&#xf155;</span>
+set $ico_chat     <span font='Font Awesome'>&#xf27b;</span>
+set $ico_chrome   <span font='Font Awesome'>&#xf268;</span>
+set $ico_code     <span font='Font Awesome'>&#xf121;</span>
+set $ico_document <span font='Font Awesome'>&#xf0f6;</span>
+set $ico_editor   <span font='Font Awesome'>&#xf044;</span>
+set $ico_email    <span font='Font Awesome'>&#xf003;</span>
+set $ico_firefox  <span font='Font Awesome'>&#xf269;</span>
+set $ico_folder   <span font='Font Awesome'>&#xf115;</span>
+set $ico_github   <span font='Font Awesome'>&#xf09b;</span>
+set $ico_hangouts <span font='Font Awesome'>&#xf10e;</span>
+set $ico_menu     <span font='Font Awesome'>&#xf0c9;</span>
+set $ico_monitor  <span font='Font Awesome'>&#xf26c;</span>
+set $ico_music    <span font='Font Awesome'>&#xf001;</span>
+set $ico_news     <span font='Font Awesome'>&#xf09e;</span>
+set $ico_package  <span font='Font Awesome'>&#xf1c6;</span>
+set $ico_play     <span font='Font Awesome'>&#xf01d;</span>
+set $ico_table    <span font='Font Awesome'>&#xf0ce;</span>
+set $ico_telegram <span font='Font Awesome'>&#xf1d9;</span>
+set $ico_terminal <span font='Font Awesome'>&#xf120;</span>
+set $ico_video    <span font='Font Awesome'>&#xf008;</span>
+set $ico_volume   <span font='Font Awesome'>&#xf028;</span>
+set $ico_whatsapp <span font='Font Awesome'>&#xf232;</span>
+set $ico_window   <span font='Font Awesome'>&#xf2d0;</span>
+
+# workspace labels ----------------------------------------------------------- #
+
+set $ws1  "1: <span font='Font Awesome'>&#xf269;</span>"
+set $ws2  "2: <span font='Font Awesome'>&#xf0f6;</span>"
+set $ws3  "3: <span font='Font Awesome'>&#xf121;</span>"
+set $ws4  "4: <span font='Font Awesome'>&#xf09e;</span>"
+set $ws5  "5: <span font='Font Awesome'>&#xf001;</span>"
+set $ws6  "6: <span font='Font Awesome'>&#xf008;</span>"
+set $ws7  "7: <span font='Font Awesome'>&#xf01d;</span>"
+set $ws8  "8: <span font='Font Awesome'>&#xf27b;</span>"
+set $ws9  "9: <span font='Font Awesome'>&#xf003;</span>"
+set $ws10 "10: <span font='Font Awesome'>&#xf26c;</span>"
+
+# workspace output -- remind: check panel output! ---------------------------- #
+
+workspace $ws1  $out_pri
+workspace $ws2  $out_pri
+workspace $ws3  $out_pri
+workspace $ws4  $out_pri
+workspace $ws5  $out_pri
+workspace $ws6  $out_pri
+workspace $ws7  $out_pri
+workspace $ws8  $out_pri
+workspace $ws9  $out_pri
+workspace $ws10 $out_sec
+# workspace $ws10 $out_pri
+
+# workspace switching -------------------------------------------------------- #
+
+workspace_auto_back_and_forth yes
+
+$sup+1 workspace $ws1
+$sup+2 workspace $ws2
+$sup+3 workspace $ws3
+$sup+4 workspace $ws4
+$sup+5 workspace $ws5
+$sup+6 workspace $ws6
+$sup+7 workspace $ws7
+$sup+8 workspace $ws8
+$sup+9 workspace $ws9
+$sup+0 workspace $ws10
+
+# moving to workspace -------------------------------------------------------- #
+
+$sup+Shift+1 move container to workspace $ws1;  workspace $ws1
+$sup+Shift+2 move container to workspace $ws2;  workspace $ws2
+$sup+Shift+3 move container to workspace $ws3;  workspace $ws3
+$sup+Shift+4 move container to workspace $ws4;  workspace $ws4
+$sup+Shift+5 move container to workspace $ws5;  workspace $ws5
+$sup+Shift+6 move container to workspace $ws6;  workspace $ws6
+$sup+Shift+7 move container to workspace $ws7;  workspace $ws7
+$sup+Shift+8 move container to workspace $ws8;  workspace $ws8
+$sup+Shift+9 move container to workspace $ws9;  workspace $ws9
+$sup+Shift+0 move container to workspace $ws10; workspace $ws10
+
+# workspace cycling ---------------------------------------------------------- #
+
+bindsym Ctrl+Mod1+Right      workspace next
+bindsym Ctrl+Mod1+Left       workspace prev
+
+# urgent workspace ----------------------------------------------------------- #
+
+$sup+u [urgent=latest] focus
+
+# chrome apps instances ------------------------------------------------------ #
+
+set $spotify_instance  [instance="crx_pjibgclleladliembfgfagdaldikeohf"]
+set $cef_instance      [instance="crx_bpokmjnfjkoanfojhmgocofpjljaehfb"]
+set $drumbit_instance  [instance="crx_emkaemcghilafekbnjdpienhfkmhbjfn"]
+set $auralis_instance  [instance="crx_kfldlpicolfknfifcpiipbgklinnenne"]
+set $scales_instance   [instance="crx_kgmlapedajmlebhhipilgaphlhklkjlk"]
+set $whatsapp_instance [instance="crx_hnpfjngllnobngcgfapefoaidbinmjnm"]
+
+# windows -------------------------------------------------------------------- #
+
+$sup+q                 kill
+
+default_border pixel 2
+$sup+b                       border toggle
+
+# floating enable shortener
+set $is_float floating enable
+
+# non-loating windows...
+for_window [class="^.*"]                title_format "  $ico_window  %title"
+for_window [class="Thunderbird"]        title_format "  $ico_email  %title"
+for_window [class="Firefox"]            title_format "  $ico_firefox  %title"
+for_window [class="Geany"]              title_format "  $ico_editor  %title"
+for_window [class="libreoffice-writer"] title_format "  $ico_document  %title"
+for_window [class="libreoffice-calc"]   title_format "  $ico_table  %title"
+for_window [class="TelegramDesktop"]    title_format "  $ico_telegram  %title"
+for_window $whatsapp_instance           title_format "  $ico_whatsapp  %title"
+
+# floating windows...
+for_window [class="Thunar"]         title_format "  $ico_folder  %title"   $is_float
+for_window [class="GitHub Desktop"]  title_format "  $ico_github  %title"   $is_float
+for_window [class="Pavucontrol"]     title_format "  $ico_music  %title"    $is_float
+for_window [class="Gdebi"]           title_format "  $ico_package  %title"  $is_float
+for_window [instance="Msgcompose"]   title_format "  $ico_email  %title"    $is_float
+for_window $cef_instance             title_format "  $ico_bank  %title"     $is_float
+for_window $drumbit_instance         title_format "  $ico_music  %title"    $is_float
+for_window $auralis_instance         title_format "  $ico_music  %title"    $is_float
+for_window $scales_instance          title_format "  $ico_music  %title"    $is_float
+
+for_window [instance="VirtualBox Machine"] $is_float
+for_window [instance="VirtualBox Manager"] $is_float
+for_window [class="Lxappearance"]          $is_float
+for_window [class="Nitrogen"]              $is_float
+for_window [class="Gnome-calculator"]      $is_float
+for_window [class="Gnome-mahjongg"]        $is_float
+
+# terminal windows...
+for_window [class="Xfce4-terminal"]  title_format "  $ico_terminal  %title"
+
+for_window [title="^NeoMutt Mail$"]              title_format "  $ico_email  %title"
+for_window [title="^Mansearch - Manual Viewer$"] title_format "  $ico_document  %title" floating enable
+for_window [title="^SimplerNote$"]               title_format "  $ico_editor  %title" floating enable
+
+# workspace assignments ------------------------------------------------------ #
+
+assign [class="firefox"]            $ws1
+
+assign [class="libreoffice-writer|Soffice"] $ws2
+assign [class="libreoffice-calc|Soffice"]   $ws2
+
+assign [class="Geany"]              $ws3
+
+assign $drumbit_instance            $ws5
+assign $auralis_instance            $ws5
+assign $scales_instance             $ws5
+
+assign $spotify_instance            $ws7
+assign [class="Poddr"]              $ws7
+
+assign $whatsapp_instance           $ws8
+assign [class="TelegramDesktop"]    $ws8
+
+assign [title="^NeoMutt Mail$"]     $ws9
+assign [class="Thunderbird"]        $ws9
+
+# colors --------------------------------------------------------------------- #
+
+set $darker   #080910
+set $dark     #181920
+set $black    #2C323E
+set $darkgray #3B4252
+set $gray     #E7E8EB
+set $white    #F5F6F7
+set $red      #BF616A
+set $orange   #DBAB6B
+set $yellow   #EBCB8B
+set $green    #A3BE8C
+set $cyan     #88C0D0
+set $blue     #91B1D1
+set $darkblue #416181
+set $purple   #B48EAD
+
+# appearance ----------------------------------------------------------------- #
+
+font pango:Open Sans Semibold 10
+
+# class                  border  backgr  text       indicator  client_border
+client.focused           $black  $black  $blue      $cyan      $black
+client.unfocused         $darker $darker $darkblue  $cyan      $darker
+client.focused_inactive  $dark   $dark   $darkblue  $cyan      $dark
+client.urgent            $red    $red    $dark      $cyan      $red
+
+# status bar ----------------------------------------------------------------- #
+
+bar {
+        $out_pri
+        
+        position bottom
+        wheel_up_cmd nop
+        wheel_down_cmd nop
+        tray_padding 5
+        mode dock
+        
+        status_command i3blocks
+
+        font pango:Open Sans 10
+
+        colors {
+            statusline    $white
+            background    $dark
+
+            #                   border     backgr    text
+            focused_workspace   $blue      $blue     $darker
+            active_workspace    $dark      $dark     $darkgray
+            inactive_workspace  $dark      $dark     $darkgray
+            urgent_workspace    $red       $red      $darker
+        }
+}
+
+# i3blocks - caps lock status
+bindsym --release Caps_Lock  $exe pkill -SIGRTMIN+11 i3blocks
+
+# screenshots ---------------------------------------------------------------- #
+
+bindsym Print                $exe xfce4-screenshooter
+
+# volume control and i3blocks volume status ---------------------------------- #
+
+set $vol_signal pkill -SIGRTMIN+10 i3blocks
+
+bindsym XF86AudioRaiseVolume $exe pactl set-sink-volume $pa_sink +5%  && $vol_signal
+bindsym XF86AudioLowerVolume $exe pactl set-sink-volume $pa_sink -5%  && $vol_signal
+bindsym XF86AudioMute        $exe pactl set-sink-mute $pa_sink toggle && $vol_signal
+
+bindsym XF86HomePage         $exe pavucontrol
+
+# launchers ------------------------------------------------------------------ #
+
+# rofi/dmenu desktop launchers...
+# $sup+space                   $exe $bin_path/rofi-launcher
+$sup+space                   $exe $bin_path/dmenu-desktop-menu
+
+# dmenu search manual (man)...
+$sup+F1                      $exe $bin_path/dmenu-mansearch
+
+# rofi/dmenu run...
+# $sup+F2                      $exe rofi -show run
+$sup+F2                      $exe $bin_path/dmenu-command-menu
+
+# rofi/dmenu search places...
+# $sup+F3                      $exe $bin_path/rofi-places
+$sup+F3                      $exe $bin_path/dmenu-places-menu
+
+# rofi/dmenu web search...
+# $sup+F4                      $exe $bin_path/rofi-websearch
+$sup+F4                      $exe $bin_path/dmenu-websearch
+
+# ssgen - script to open / create scripts...
+$sup+F5                      $exe $bin_path/dmenu-ssgen
+
+# notes-dmenu - script to open / create notes...
+$sup+F6                      $exe $bin_path/dmenu-notes
+
+# rofi Alt+Tab to show windows list...
+$sup+Tab             $exe rofi -show window
+# $sup+Tab                     $exe $bin_path/dmenu-windows-list
+
+# script to focus / launch Geany...
+$sup+e                       $exe $bin_path/launcher-geany
+
+# script to focus / launch default mail client (NeoMutt or Thunderbird)...
+$sup+m                       $exe $default_mail
+
+# launch Firefox...
+$sup+w                       $exe firefox
+
+# launch Filezilla...
+$sup+f                       $exe filezilla
+
+# launch PCManFM...
+$sup+p                       $exe pcmanfm
+
+# dmenu open file
+$sup+o                       $exe $bin_path/dmenu-open-file
+
+# launch GitHub Desktop...
+$sup+g                       $exe $bin_path/GitHubDesktop-linux-1.6.3.AppImage
+
+# launch LibreOffice
+$sup+d                       $exe lowriter
+$sup+s                       $exe localc
+
+# dmenu launchers
+$sup+c $exe $bin_path/dmenu-menus
+
+
+# session startup ------------------------------------------------------------ #
+
+$exe_always ~/.screenlayout/i3-default.sh
+$exe_always compton --config ~/.config/i3/compton.conf
+$exe_always xset b off
+$exe_always numlockx
+$exe nitrogen --restore
+$exe /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+$exe dropbox start -i
+$exe wicd-gtk -t
+
+# ---------------------------------------------------------------------------- #

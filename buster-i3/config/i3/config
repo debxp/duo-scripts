@@ -1,0 +1,317 @@
+# init ----------------------------------------------------------------------- #
+
+# mod key (Alt=Mod1, Super=Mod4)
+set $mod Mod4
+
+# bindsym shortener
+set $sup bindsym Mod4
+
+# exec shortener
+set $exe        exec --no-startup-id
+set $exe_always exec_always --no-startup-id
+
+# user local bin path (usually '~/bin' or '~/.local/bin')
+set $bin_path ~/.local/bin
+
+# direction keys
+set $ukey Up
+set $dkey Down
+set $lkey Left
+set $rkey Right
+
+# pulseaudio sink (usually 0 or 1))
+set $pa_sink 0
+
+# default mail client
+set $default_mail ~/.local/bin/launcher-thunderbird
+
+# session control ------------------------------------------------------------ #
+
+$sup+Shift+c                 reload
+$sup+Shift+r                 restart
+
+$sup+Shift+F12               $exe $bin_path/dmenu-i3-logout
+
+# terminal ------------------------------------------------------------------- #
+
+$sup+Return                  $exe i3-sensible-terminal
+
+# focus ---------------------------------------------------------------------- #
+
+focus_follows_mouse no
+focus_wrapping no
+
+$sup+$lkey                   focus left
+$sup+$dkey                   focus down
+$sup+$ukey                   focus up
+$sup+$rkey                   focus right
+
+$sup+Prior                   focus parent
+$sup+Next                    focus child
+
+# splitting ------------------------------------------------------------------- #
+
+$sup+semicolon               split toggle
+
+# layout switching ----------------------------------------------------------- #
+
+$sup+slash                   layout toggle splitv splith
+$sup+Shift+question          layout toggle all
+$sup+F11                     fullscreen toggle
+
+# floating ------------------------------------------------------------------- #
+
+floating_modifier Mod1
+
+$sup+period                  floating toggle
+$sup+comma                   focus mode_toggle
+
+# moving --------------------------------------------------------------------- #
+
+$sup+Shift+$lkey             move left
+$sup+Shift+$dkey             move down
+$sup+Shift+$ukey             move up
+$sup+Shift+$rkey             move right
+
+# resizing ------------------------------------------------------------------- #
+
+$sup+Control $rkey           resize grow   width  5 px or 5 ppt
+$sup+Control $lkey           resize shrink width  5 px or 5 ppt
+$sup+Control $ukey           resize grow   height 5 px or 5 ppt
+$sup+Control $dkey           resize shrink height 5 px or 5 ppt
+
+# icons ---------------------------------------------------------------------- #
+
+# editor       
+# menu         
+# document     
+# table        
+# code         
+# chat         
+# news         
+# monitor      
+# firefox      
+# chrome       
+# terminal     
+# window       
+# github       
+# whatsapp     
+# telegram     
+# hangout      
+# bank         
+# folder       
+# package      
+#
+# no preview...
+#
+# volume
+# play
+# music
+# video
+# email
+
+set $ico_bank     <span font='Font Awesome'>&#xf155;</span>
+set $ico_chat     <span font='Font Awesome'>&#xf27b;</span>
+set $ico_chrome   <span font='Font Awesome'>&#xf268;</span>
+set $ico_code     <span font='Font Awesome'>&#xf121;</span>
+set $ico_document <span font='Font Awesome'>&#xf0f6;</span>
+set $ico_editor   <span font='Font Awesome'>&#xf044;</span>
+set $ico_email    <span font='Font Awesome'>&#xf003;</span>
+set $ico_firefox  <span font='Font Awesome'>&#xf269;</span>
+set $ico_folder   <span font='Font Awesome'>&#xf115;</span>
+set $ico_github   <span font='Font Awesome'>&#xf09b;</span>
+set $ico_hangouts <span font='Font Awesome'>&#xf10e;</span>
+set $ico_menu     <span font='Font Awesome'>&#xf0c9;</span>
+set $ico_monitor  <span font='Font Awesome'>&#xf26c;</span>
+set $ico_music    <span font='Font Awesome'>&#xf001;</span>
+set $ico_news     <span font='Font Awesome'>&#xf09e;</span>
+set $ico_package  <span font='Font Awesome'>&#xf1c6;</span>
+set $ico_play     <span font='Font Awesome'>&#xf01d;</span>
+set $ico_table    <span font='Font Awesome'>&#xf0ce;</span>
+set $ico_telegram <span font='Font Awesome'>&#xf1d9;</span>
+set $ico_terminal <span font='Font Awesome'>&#xf120;</span>
+set $ico_video    <span font='Font Awesome'>&#xf008;</span>
+set $ico_volume   <span font='Font Awesome'>&#xf028;</span>
+set $ico_whatsapp <span font='Font Awesome'>&#xf232;</span>
+set $ico_window   <span font='Font Awesome'>&#xf2d0;</span>
+
+# workspace labels ----------------------------------------------------------- #
+
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
+
+# workspace switching -------------------------------------------------------- #
+
+workspace_auto_back_and_forth yes
+
+$sup+1 workspace $ws1
+$sup+2 workspace $ws2
+$sup+3 workspace $ws3
+$sup+4 workspace $ws4
+$sup+5 workspace $ws5
+$sup+6 workspace $ws6
+$sup+7 workspace $ws7
+$sup+8 workspace $ws8
+$sup+9 workspace $ws9
+$sup+0 workspace $ws10
+
+# moving to workspace -------------------------------------------------------- #
+
+$sup+Shift+1 move container to workspace $ws1;  workspace $ws1
+$sup+Shift+2 move container to workspace $ws2;  workspace $ws2
+$sup+Shift+3 move container to workspace $ws3;  workspace $ws3
+$sup+Shift+4 move container to workspace $ws4;  workspace $ws4
+$sup+Shift+5 move container to workspace $ws5;  workspace $ws5
+$sup+Shift+6 move container to workspace $ws6;  workspace $ws6
+$sup+Shift+7 move container to workspace $ws7;  workspace $ws7
+$sup+Shift+8 move container to workspace $ws8;  workspace $ws8
+$sup+Shift+9 move container to workspace $ws9;  workspace $ws9
+$sup+Shift+0 move container to workspace $ws10; workspace $ws10
+
+# workspace cycling ---------------------------------------------------------- #
+
+bindsym Ctrl+Mod1+Right      workspace next
+bindsym Ctrl+Mod1+Left       workspace prev
+
+# urgent workspace ----------------------------------------------------------- #
+
+$sup+u [urgent=latest] focus
+
+# windows -------------------------------------------------------------------- #
+
+$sup+q                 kill
+
+default_border pixel 2
+$sup+b                       border toggle
+
+# colors --------------------------------------------------------------------- #
+
+set $darker   #080910
+set $dark     #181920
+set $black    #2C323E
+set $darkgray #3B4252
+set $gray     #E7E8EB
+set $white    #F5F6F7
+set $red      #BF616A
+set $orange   #DBAB6B
+set $yellow   #EBCB8B
+set $green    #A3BE8C
+set $cyan     #88C0D0
+set $blue     #91B1D1
+set $darkblue #416181
+set $purple   #B48EAD
+
+# appearance ----------------------------------------------------------------- #
+
+font pango:Open Sans Semibold 10
+
+# class                  border  backgr  text       indicator  client_border
+client.focused           $black  $black  $blue      $cyan      $black
+client.unfocused         $darker $darker $darkblue  $cyan      $darker
+client.focused_inactive  $dark   $dark   $darkblue  $cyan      $dark
+client.urgent            $red    $red    $dark      $cyan      $red
+
+# status bar ----------------------------------------------------------------- #
+
+bar {
+        position bottom
+        wheel_up_cmd nop
+        wheel_down_cmd nop
+        tray_padding 5
+        mode dock
+        
+        status_command i3blocks
+
+        font pango:Open Sans 10
+
+        colors {
+            statusline    $white
+            background    $dark
+
+            #                   border     backgr    text
+            focused_workspace   $blue      $blue     $darker
+            active_workspace    $dark      $dark     $darkgray
+            inactive_workspace  $dark      $dark     $darkgray
+            urgent_workspace    $red       $red      $darker
+        }
+}
+
+# i3blocks - caps lock status
+bindsym --release Caps_Lock  $exe pkill -SIGRTMIN+11 i3blocks
+
+# screenshots ---------------------------------------------------------------- #
+
+bindsym Print                $exe xfce4-screenshooter
+
+# volume control and i3blocks volume status ---------------------------------- #
+
+set $vol_signal pkill -SIGRTMIN+10 i3blocks
+
+bindsym XF86AudioRaiseVolume $exe pactl set-sink-volume $pa_sink +5%  && $vol_signal
+bindsym XF86AudioLowerVolume $exe pactl set-sink-volume $pa_sink -5%  && $vol_signal
+bindsym XF86AudioMute        $exe pactl set-sink-mute $pa_sink toggle && $vol_signal
+
+bindsym XF86HomePage         $exe pavucontrol
+
+# launchers ------------------------------------------------------------------ #
+
+# dmenu desktop launcher...
+$sup+space                   $exe $bin_path/dmenu-desktop-menu
+
+# dmenu search manual (man)...
+$sup+F1                      $exe $bin_path/dmenu-mansearch
+
+# dmenu run...
+$sup+F2                      $exe $bin_path/dmenu-command-menu
+
+# dmenu search places...
+$sup+F3                      $exe $bin_path/dmenu-places-menu
+
+# dmenu web search...
+$sup+F4                      $exe $bin_path/dmenu-websearch
+
+# ssgen - script to open / create scripts...
+$sup+F5                      $exe $bin_path/dmenu-ssgen
+
+# notes-dmenu - script to open / create notes...
+$sup+F6                      $exe $bin_path/dmenu-notes
+
+# rofi Alt+Tab to show windows list...
+$sup+Tab                     $exe rofi -show window
+
+# script to focus / launch default mail client...
+$sup+m                       $exe $default_mail
+
+# launch Firefox...
+$sup+w                       $exe firefox
+
+# launch PCManFM...
+$sup+p                       $exe pcmanfm
+
+# dmenu open file
+$sup+o                       $exe $bin_path/dmenu-open-file
+
+# launch LibreOffice
+$sup+d                       $exe lowriter
+$sup+s                       $exe localc
+
+
+# session startup ------------------------------------------------------------ #
+
+# $exe_always ~/.screenlayout/i3-default.sh
+$exe_always compton --config ~/.config/i3/compton.conf
+$exe_always xset b off
+$exe_always numlockx
+$exe nitrogen --restore
+$exe /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+$exe wicd-gtk -t
+
+# ---------------------------------------------------------------------------- #

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+is_runnung="$(wmctrl -lx | grep -i "geany")"
+
+if [[ -z $is_runnung ]]; then
+    i3-msg 'exec geany'
+    sleep 2
+fi
+
+i3-msg '[class="Geany"] focus'

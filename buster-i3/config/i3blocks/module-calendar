@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+case "$BLOCK_BUTTON" in
+  1|2|3) 
+    i3-msg 'exec gsimplecal' > /dev/null ;;
+esac
+echo "<span font='Font Awesome'></span>  $(date '+%d %b, %Y - %H:%M')"
