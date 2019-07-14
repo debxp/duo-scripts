@@ -17,5 +17,9 @@ sudo apt install mednafen mednaffe
 
 sudo apt install wesnoth
 
+# SuperTuxKart
+
+sudo apt install supertuxkart
+
 
 echo -e "\nPronto!\n"
