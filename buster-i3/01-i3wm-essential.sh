@@ -18,6 +18,7 @@ sudo apt install xorg \
                  unrar \
                  xfce4-terminal \
                  xfce4-screenshooter \
+                 xfce4-notifyd \
                  nitrogen \
                  wicd-gtk \
                  wicd-curses \
