@@ -48,4 +48,5 @@ sudo apt install xorg \
                  menulibre \
                  mousepad \
                  ttf-mscorefonts-installer \
-                 poppler-utils
+                 poppler-utils \
+                 policykit-1-gnome

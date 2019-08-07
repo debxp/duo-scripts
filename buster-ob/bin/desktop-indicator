@@ -24,7 +24,7 @@ desktop_anterior() {
 
 desktop_show() {
     echo "<txt>$(( $IDESKTOP + 1 ))</txt>"
-    echo "<txtclick>xdotool key ctrl+alt+d</txtclick>"
+    echo "<txtclick>xdotool key super+d</txtclick>"
     echo "<tool>Alternar desktop...</tool>"
 }
 

@@ -1,5 +1,5 @@
 # Restaurar a resolução...
-~/.screenlayout/i3-default.sh &
+~/.screenlayout/default.sh &
 
 # Compton...
 compton --config ~/.config/compton/compton.conf &

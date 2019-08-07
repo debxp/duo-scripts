@@ -11,6 +11,7 @@ echo -e "\nChecando pastas de destino..."
 echo -e "\nCopiando arquivos de configuração..."
 
 cp -R config/openbox "$HOME/.config/"
+cp -R config/nitrogen "$HOME/.config/"
 cp -R config/compton "$HOME/.config/"
 cp -R config/gtk-3.0 "$HOME/.config/"
 cp -R config/rofi "$HOME/.config/"
@@ -29,5 +30,7 @@ cp -R artwork/fonts "$HOME/.local/share/"
 echo -e "Aplicando configurações de usuário..."
 
 sed -i "s/USER/$USER/g" $HOME/.gtkrc-2.0
+sed -i "s/USER/$USER/g" $HOME/.config/nitrogen/nitrogen.cfg
+sed -i "s/USER/$USER/g" $HOME/.config/nitrogen/bg-saved.cfg 
 
 echo -e "\Pronto!\n"
