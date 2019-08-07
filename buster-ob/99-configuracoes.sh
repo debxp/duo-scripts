@@ -36,4 +36,4 @@ sed -i "s/USER/$USER/g" $HOME/.gtkrc-2.0
 sed -i "s/USER/$USER/g" $HOME/.config/nitrogen/nitrogen.cfg
 sed -i "s/USER/$USER/g" $HOME/.config/nitrogen/bg-saved.cfg 
 
-echo -e "\Pronto!\n"
+echo -e "\nPronto!\n"
