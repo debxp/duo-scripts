@@ -3,5 +3,5 @@
 sudo apt install thunderbird \
                  thunderbird-l10n-pt-br \
                  telegram-desktop \
-                 transmission
+                 transmission \
                  youtube-dl
