@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# theme="$HOME/.config/rofi/themes/debxp-center.rasi"
+
+modis=" \
+Abrir pasta:$HOME/.local/bin/rofi-modi-find, \
+Buscar na web:$HOME/.local/bin/rofi-modi-websearch \
+"
+
+rofi -show drun -sort -i -disable-history \
+     -drun-match-fields "name" \
+#      -sidebar-mode \
+#      -modi "drun,$modis,run,window" \
+#      -theme "$theme"
+
+
+exit 0

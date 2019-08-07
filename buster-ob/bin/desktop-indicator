@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+IDESKTOP=$(xdotool get_desktop)      # número do desktop atual
+NDESKTOP=$(xdotool get_num_desktops) # quantidade de áreas de trabalho
+
+
+# Muda para o desktop seguinte...
+
+desktop_seguinte() {
+    xdotool set_desktop --relative 1
+}
+
+# Muda para o desktop anterior...
+
+desktop_anterior() {
+    [ $(( IDESKTOP - 1 )) -lt 0 ] \
+        && anterior=$(( $NDESKTOP - 1 )) \
+        || anterior=$(( $IDESKTOP - 1 ))
+
+    xdotool set_desktop $anterior
+}
+
+# Exibe o número do desktop atual e alterna a exibição...
+
+desktop_show() {
+    echo "<txt>$(( $IDESKTOP + 1 ))</txt>"
+    echo "<txtclick>xdotool key ctrl+alt+d</txtclick>"
+    echo "<tool>Alternar desktop...</tool>"
+}
+
+# Seleciona a função a ser executada de acordo
+# com o argumento passado com o script...
+
+case $1 in
+  "next")  desktop_seguinte
+           ;;
+  "prev")  desktop_anterior
+           ;;
+  "show")   desktop_show
+           ;;
+esac

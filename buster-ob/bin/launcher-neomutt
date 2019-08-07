@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+is_running="$(wmctrl -lx | grep "NeoMutt Mail")"
+
+if [[ -z $is_running ]]; then
+    i3-msg 'exec i3-sensible-terminal -T "NeoMutt Mail" -e "neomutt"'
+    sleep 1
+fi
+
+i3-msg '[title="NeoMutt Mail"] focus'
+
+exit 0

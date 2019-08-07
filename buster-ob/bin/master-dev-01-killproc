@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+selected="$(ps -a -u $USER | \
+            dmenu -i -l 20 -p "Select process to kill" | \
+            awk '{print $1" "$4}')"; 
+            
+if [[ ! -z $selected ]]; then
+    selpid="$(awk '{print $1}' <<< $selected)"; 
+    kill -9 $selpid
+fi
+
+exit 0
