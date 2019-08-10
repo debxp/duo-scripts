@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+. $HOME/.local/bin/cron-exp-vars
+
+wall=$(find ~/.local/share/wallpapers/ -type f | sort -R | tail -1)
+feh --bg-fill $wall
+
+exit 0
+

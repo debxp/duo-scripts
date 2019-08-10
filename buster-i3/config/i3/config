@@ -307,11 +307,10 @@ $sup+s                       $exe localc
 # session startup ------------------------------------------------------------ #
 
 # $exe_always ~/.screenlayout/i3-default.sh
-$exe_always compton --config ~/.config/i3/compton.conf
+$exe_always compton --config ~/.config/compton/compton.conf
 $exe_always xset b off
 $exe_always numlockx
-$exe nitrogen --restore
+$exe_always ~/.fehbg
 $exe /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-$exe wicd-gtk -t
 
 # ---------------------------------------------------------------------------- #

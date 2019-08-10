@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-fill ~/.local/share/wallpapers/debian_drip.png

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+export DISPLAY=:0
+eval "export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/\$(id -u)/bus"
