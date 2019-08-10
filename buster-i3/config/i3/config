@@ -312,6 +312,7 @@ $exe_always xset b off
 $exe_always numlockx
 $exe_always ~/.fehbg
 $exe /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+$exe xfce4-power-manager
 $exe wicd-gtk -t
 
 # ---------------------------------------------------------------------------- #
