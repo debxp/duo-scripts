@@ -5,6 +5,7 @@ echo -e "\nCopiando arquivos de configuração..."
 cp -R config "$HOME/.config"
 cp home/gtkrc-2.0 "$HOME/.gtkrc-2.0"
 cp home/fehbg "$HOME/.fehbg"
+cp home/bash_profile "$HOME/.bash_profile"
 
 # user dirs
 echo -e "Criando pastas do usuário..."
