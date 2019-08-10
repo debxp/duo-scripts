@@ -17,6 +17,7 @@ mkdir "$HOME/pics"
 mkdir "$HOME/pub"
 mkdir "$HOME/templates"
 mkdir "$HOME/videos"
+mkdir "$HOME/notes"
 
 # create ~/.local dirs 
 echo -e "Criando pasta ~/.local..."
