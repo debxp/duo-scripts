@@ -45,6 +45,7 @@ sudo apt install xorg \
                  xfce4-pulseaudio-plugin \
                  xfce4-screenshooter \
                  xfce4-settings \
+                 xfce4-power-manager \
                  menulibre \
                  mousepad \
                  ttf-mscorefonts-installer \
