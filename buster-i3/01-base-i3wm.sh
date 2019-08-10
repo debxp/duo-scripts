@@ -19,6 +19,7 @@ sudo apt install xorg \
                  xfce4-terminal \
                  xfce4-screenshooter \
                  xfce4-notifyd \
+                 xfce4-power-manager \
                  feh \
                  wicd-gtk \
                  wicd-curses \
