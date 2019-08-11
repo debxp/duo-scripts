@@ -15,11 +15,11 @@ sudo apt install mednafen mednaffe
 
 # The Battle For Wesnoth
 
-sudo apt install wesnoth
+# sudo apt install wesnoth
 
 # SuperTuxKart
 
-sudo apt install supertuxkart
+# sudo apt install supertuxkart
 
 
 echo -e "\nPronto!\n"
