@@ -373,7 +373,7 @@
     </keybind>
     
     <!-- Terminal -->
-    <keybind key="W-return">
+    <keybind key="W-Return">
       <action name="Execute">
         <command>xfce4-terminal</command>
       </action>
