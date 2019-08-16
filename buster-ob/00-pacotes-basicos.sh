@@ -2,5 +2,5 @@
 
 sudo apt install build-essential \
                  curl \
-                 lynx \
+                 lynx
                  
