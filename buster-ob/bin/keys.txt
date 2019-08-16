@@ -14,8 +14,6 @@
   <b>&bull; Super F1</b> ............. Busca nos manuais
   <b>&bull; Super F2</b> ............. Executar comandos
   <b>&bull; Super F3</b> ............. Abrir pastas
-  <b>&bull; Super F4</b> ............. Buscar na web
-  
   
   <b>ÁREAS DE TRABALHO</b>
   

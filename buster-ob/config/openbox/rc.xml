@@ -358,13 +358,6 @@
       </action>
     </keybind>
     
-    <!-- dmenu web search -->
-    <keybind key="W-F4">
-      <action name="Execute">
-        <command>~/.local/bin/dmenu-websearch</command>
-      </action>
-    </keybind>
-    
     <!-- Screenshot -->
     <keybind key="Print">
       <action name="Execute">
