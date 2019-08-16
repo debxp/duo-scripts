@@ -123,10 +123,10 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <!-- set names up here if you want to, like this:
-    <name>desktop 1</name>
-    <name>desktop 2</name>
-    -->
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -203,46 +203,46 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <keybind key="W-S-Left">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="W-S-Right">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
+    <keybind key="W-S-Up">
       <action name="SendToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Down">
+    <keybind key="W-S-Down">
       <action name="SendToDesktop">
         <to>down</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-F1">
+    <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-F2">
+    <keybind key="W-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-F3">
+    <keybind key="W-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
@@ -250,7 +250,9 @@
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
+    
     <!-- Keybindings for windows -->
+    
     <keybind key="A-F4">
       <action name="Close"/>
     </keybind>
@@ -264,12 +266,7 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>scrot -s</command>
-      </action>
-    </keybind>
+
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -300,43 +297,303 @@
         </finalactions>
       </action>
     </keybind>
+    
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
+    
+    <keybind key="W-A-Right">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="W-A-Left">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="W-A-Up">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="W-A-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for running applications -->
-    <keybind key="W-e">
+    
+    <!-- Keybindings for commands -->
+    
+    <!-- Rofi Desktop Launcher -->
+    <keybind key="W-space">
       <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <command>~/.local/bin/rofi-launcher</command>
       </action>
     </keybind>
-    <!-- Launch scrot when Print is pressed -->
+    
+    <!-- lista de atalhos -->
+    <keybind key="F12">
+      <action name="Execute">
+        <command>~/.local/bin/keys_cheatsheet</command>
+      </action>
+    </keybind>
+    
+    <!-- dmenu man search -->
+    <keybind key="W-F1">
+      <action name="Execute">
+        <command>~/.local/bin/dmenu-mansearch</command>
+      </action>
+    </keybind>
+    
+    <!-- dmenu commands -->
+    <keybind key="W-F2">
+      <action name="Execute">
+        <command>~/.local/bin/dmenu-command-menu</command>
+      </action>
+    </keybind>
+    
+    <!-- dmenu places -->
+    <keybind key="W-F3">
+      <action name="Execute">
+        <command>~/.local/bin/dmenu-places-menu</command>
+      </action>
+    </keybind>
+    
+    <!-- dmenu web search -->
+    <keybind key="W-F4">
+      <action name="Execute">
+        <command>~/.local/bin/dmenu-websearch</command>
+      </action>
+    </keybind>
+    
+    <!-- Screenshot -->
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot</command>
+        <command>xfce4-screenshooter</command>
       </action>
     </keybind>
+    
+    <!-- Terminal -->
+    <keybind key="W-return">
+      <action name="Execute">
+        <command>xfce4-terminal</command>
+      </action>
+    </keybind>
+    
+    <!-- Firefox -->
+    <keybind key="W-w">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </keybind>
+    
+    <!-- Thunderbird -->
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>thunderbird</command>
+      </action>
+    </keybind>
+    
+    <!-- Mousepad -->
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>mousepad</command>
+      </action>
+    </keybind>
+    
+    <!-- Libreofffice -->
+    <keybind key="W-o">
+      <action name="Execute">
+        <command>libreoffice</command>
+      </action>
+    </keybind>
+    
+    <!-- Ações do OpenBox -->
+    <keybind key="W-S-r">
+      <action name="Restart"/>
+    </keybind>
+    <keybind key="W-S-e">
+      <action name="Reconfigure"/>
+    </keybind>
+    <keybind key="W-S-F12">
+      <action name="Execute">
+        <command>obsession-logout</command>
+      </action>
+    </keybind>
+
+    <!-- 
+    Move janelas para os 4 cantos da tela2 
+    -->
+    <keybind key="W-KP_9">
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-KP_7">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-KP_1">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+      </action>
+    </keybind>
+    <keybind key="W-KP_3">
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+      </action>
+    </keybind>
+    <!-- 
+    Move janelas para o centro da tela 
+    -->
+    <keybind key="W-KP_5">
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+      </action>
+    </keybind>
+    <!-- 
+    Move janelas para os 4 lados da tela 
+    -->
+    <keybind key="W-KP_8">
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-KP_2">
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>-0</y>
+      </action>
+    </keybind>
+    <keybind key="W-KP_4">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>center</y>
+      </action>
+    </keybind>
+    <keybind key="W-KP_6">
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>center</y>
+      </action>
+    </keybind>
+    <!-- 
+    Move janelas para os 4 cantos da tela2 reduzindo largura e altura em 50%
+    -->
+    <keybind key="W-C-KP_9">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <height>50%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-C-KP_7">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <height>50%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-C-KP_1">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <height>50%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-C-KP_3">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <height>50%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <!-- 
+    Move janelas para os 4 lados da tela reduzindo largura ou altura em 50% 
+    e maximizando veltical ou horizontalmente  
+    -->
+    <keybind key="W-C-KP_8">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>0</y>
+        <height>50%</height>
+        <width>100%</width>
+      </action>
+    </keybind>
+    <keybind key="W-C-KP_2">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>-0</y>
+        <height>50%</height>
+        <width>100%</width>
+      </action>
+    </keybind>
+    <keybind key="W-C-KP_4">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>center</y>
+        <height>100%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-C-KP_6">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>center</y>
+        <height>100%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <!-- 
+    Maximizar e minimizar 
+    -->
+    <keybind key="W-S-plus">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="W-S-KP_Add">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="W-S-minus">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="W-S-KP_Subtract">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="W-S-q">
+      <action name="Close"/>
+    </keybind>
+    <!-- 
+    Maximizar/Restaurar Vertical/Horizontalmente 
+    -->
+    <keybind key="W-S-v">
+      <action name="ToggleMaximize">
+        <direction>vertical</direction>
+      </action>
+    </keybind>
+    <keybind key="W-S-h">
+      <action name="ToggleMaximize">
+        <direction>horizontal</direction>
+      </action>
+    </keybind>
+    
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
