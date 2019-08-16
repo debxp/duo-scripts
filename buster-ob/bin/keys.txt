@@ -58,6 +58,7 @@
   <b>PROGRAMAS</b>
   
   <b>&bull; Super Enter</b> .......... Terminal
+  <b>&bull; Super P</b> .............. Gerenciador de Arquivos
   <b>&bull; Super E</b> .............. Editor de Textos
   <b>&bull; Super W</b> .............. Firefox
   <b>&bull; Super M</b> .............. Thunderbird

@@ -399,6 +399,13 @@
         <command>mousepad</command>
       </action>
     </keybind>
+
+    <!-- PCManFM -->
+    <keybind key="W-p">
+      <action name="Execute">
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
     
     <!-- Libreofffice -->
     <keybind key="W-o">
