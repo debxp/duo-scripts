@@ -2,12 +2,11 @@
 
 clear
 
-echo -e "\nChecando pastas de destino..."
+echo -e "\nCriando pastas de destino..."
 
-[[ -d "$HOME/.config" ]] || mkdir "$HOME/.config"
-[[ -d "$HOME/.local" ]] || mkdir "$HOME/.local"
-[[ -d "$HOME/.local/share" ]] || mkdir "$HOME/.local/share"
-[[ -d "$HOME/.local/opt" ]] || mkdir "$HOME/.local/opt"
+mkdir -p "$HOME/.config"
+mkdir -p "$HOME/.local/share"
+mkdir -p "$HOME/.local/opt"
 
 echo -e "\nCopiando arquivos de configuração..."
 
@@ -19,7 +18,6 @@ cp -R config/rofi "$HOME/.config/"
 cp -R config/xfce4 "$HOME/.config/"
 cp home/gtkrc-2.0 "$HOME/.gtkrc-2.0"
 cp home/bash_profile "$HOME/.bash_profile"
-
 
 echo -e "\nCopiando scripts..."
 
