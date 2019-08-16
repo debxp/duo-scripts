@@ -6,3 +6,5 @@ sudo mv firefox /opt/
 rm firefox.tar.bz2
 sudo ln -s /opt/firefox/firefox /usr/bin/firefox
 sudo cp config/firefox-quantum.desktop /usr/share/applications/
+
+echo -e "\nPronto!\n"

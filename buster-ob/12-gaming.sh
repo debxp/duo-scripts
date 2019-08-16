@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# Steam
+# Gnome Games
 
-# sudo dpkg --add-architecture i386
-# sudo apt update
-# sudo apt install steam
+sudo apt install gnome-mahjongg aisleriot
 
 # Emulator
 
@@ -18,3 +16,8 @@ sudo apt install wesnoth
 
 sudo apt install supertuxkart
 
+# Steam
+
+# sudo dpkg --add-architecture i386
+# sudo apt update
+# sudo apt install steam
