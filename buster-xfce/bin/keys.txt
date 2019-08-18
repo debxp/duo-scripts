@@ -1,0 +1,71 @@
+<body style="background-color: #e9e9e9;">
+<pre>
+
+  <b>&bull; F12</b> .................. Atalhos de Teclado
+  
+  <b>&bull; Super Shift F12</b> ...... Sair
+  
+  <b>DIVERSOS</b>
+  
+  <b>&bull; PrtScr</b> ............... Captura da Tela
+
+  <b>&bull; Super Space</b> .......... Lançador de aplicativos
+  
+  <b>&bull; Super F1</b> ............. Busca nos manuais
+  <b>&bull; Super F2</b> ............. Executar comandos
+  <b>&bull; Super F3</b> ............. Abrir pastas
+  
+  <b>ÁREAS DE TRABALHO</b>
+  
+  <b>&bull; Super 1 a 4</b> ...... Ir para a área de trabalho "n"
+  <b>&bull; Super Shift →</b> .... Move janela para a área de trabalho à esquerda.
+  <b>&bull; Super Shift ←</b> .... Move janela para a área de trabalho à direita.
+    
+  <b>MOVIMENTAÇÃO DE JANELAS</b>
+  
+  <b>&bull; Super NumPad1</b> ........ ↙ Move
+  <b>&bull; Super NumPad2</b> ........ ↓ Move
+  <b>&bull; Super NumPad3</b> ........ ↘ Move
+  <b>&bull; Super NumPad4</b> ........ ← Move
+  <b>&bull; Super NumPad5</b> ........ ✛ Centraliza
+  <b>&bull; Super NumPad6</b> ........ → Move
+  <b>&bull; Super NumPad7</b> ........ ↖ Move
+  <b>&bull; Super NumPad8</b> ........ ↑ Move
+  <b>&bull; Super NumPad9</b> ........ ↗ Move
+  
+  <b>TILING</b>
+  
+  <b>&bull; Super Ctrl NumPad7</b> ... ↖ Move+Redim: 50% de Largura e Altura
+  <b>&bull; Super Ctrl NumPad9</b> ... ↗ Move+Redim: 50% de Largura e Altura
+  <b>&bull; Super Ctrl NumPad1</b> ... ↙ Move+Redim: 50% de Largura e Altura
+  <b>&bull; Super Ctrl NumPad3</b> ... ↘ Move+Redim: 50% de Largura e Altura
+  
+  <b>&bull; Super Ctrl NumPad8</b> ... ↑ Move+Redim: 50% de Altura e 100% Altura
+  <b>&bull; Super Ctrl NumPad2</b> ... ↓ Move+Redim: 50% de Altura e 100% Altura
+  <b>&bull; Super Ctrl NumPad4</b> ... ← Move+Redim: 50% de Largura e 100% Altura
+  <b>&bull; Super Ctrl NumPad6</b> ... → Move+Redim: 50% de Largura e 100% Altura  
+  
+  <b>MAXIMIZAR/MINIMIZAR</b>
+  
+  <b>&bull; Super Shift +</b> ........ Maximizar/Restaurar
+  <b>&bull; Super Shift -</b> ........ Minimizar
+  
+  <b>&bull; Super Shift V</b> ........ Maximizar/Restaurar Verticalmente
+  <b>&bull; Super Shift H</b> ........ Maximizar/Restaurar Horizontalmente
+  
+  <b>PROGRAMAS</b>
+  
+  <b>&bull; Super Enter</b> .......... Terminal
+  <b>&bull; Super P</b> .............. Gerenciador de Arquivos
+  <b>&bull; Super E</b> .............. Editor de Textos
+  <b>&bull; Super W</b> .............. Firefox
+  <b>&bull; Super M</b> .............. Thunderbird
+  <b>&bull; Super O</b> .............. LibreOffice
+  
+  <b>OPENBOX</b>
+  
+  <b>&bull; Super Shift R</b> ........ Reiniciar OpenBox
+  <b>&bull; Super Shift E</b> ........ Reconfigurar OpenBox
+
+</pre>
+</body>

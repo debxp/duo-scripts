@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+sudo apt install xorg \
+                 xfwm4 \
+                 lightdm \
+                 lightdm-gtk-greeter \
+                 lightdm-gtk-greeter-settings \
+                 xfce4-datetime-plugin \
+                 xfce4-genmon-plugin \
+                 xfce4-notifyd \
+                 xfce4-panel \
+                 xfce4-power-manager \
+                 xfce4-pulseaudio-plugin \
+                 xfce4-screenshooter \
+                 xfce4-session \
+                 xfce4-settings \
+                 xfce4-taskmanager \
+                 xfce4-terminal \
+                 xfce4-whiskermenu-plugin \
+                 pcmanfm \
+                 gvfs-backends \
+                 gvfs-fuse \
+                 p7zip-full \
+                 rar \
+                 unrar \
+                 menulibre \
+                 pavucontrol \
+                 wicd-cli \
+                 wicd-curses \
+                 wicd-gtk \
+                 policykit-1-gnome \
+                 numix-gtk-theme \
+                 numix-icon-theme \
+                 numix-icon-theme-circle \
+                 papirus-icon-theme \
+                 arc-theme \
+                 breeze-cursor-theme \
+                 inxi \
+                 htop \
+                 neofetch \
+                 wmctrl \
+                 xarchiver \
+                 xdotool \
+                 xinput \
+                 numlockx \
+                 rofi \
+                 suckless-tools \
+                 sxiv \
+                 ttf-mscorefonts-installer \
+                 yad

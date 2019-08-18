@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+is_runnung="$(wmctrl -lx | grep -i "atom\.Atom")"
+
+if [[ -z $is_runnung ]]; then
+    i3-msg 'exec atom'
+    sleep 1
+fi
+
+i3-msg '[class="Atom"] focus'

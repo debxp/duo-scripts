@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+is_running="$(wmctrl -lx | grep "Thunderbird")"
+
+if [[ -z $is_running ]]; then
+    i3-msg 'exec thunderbird'
+    sleep 5
+fi
+
+i3-msg '[class="Thunderbird"] focus'
+
+exit 0

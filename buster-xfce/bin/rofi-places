@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+ROOT_PATH="$HOME"
+ROFI_PROMPT="Abrir pasta"
+# THEME="$HOME/.config/rofi/themes/debxp-center.rasi"
+
+LIST="$(find $ROOT_PATH -type d -maxdepth 3 | sed 's|^'$ROOT_PATH/'||')"
+
+FIND_PATH="$(rofi -sort -dmenu -i -p "$ROFI_PROMPT" <<< "$LIST")"
+
+if [[ ! -z "$FIND_PATH" ]]; then
+    pcmanfm "$FIND_PATH"
+fi
+
+exit 0

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# dmenu theming
+. $HOME/.local/bin/dmenu-theming
+
+prompt="-p "
+colors="-nb \#2C323E -nf \#9899a0 -sb \#81A1C1 -sf \#E5E9F0"
+
+j4-dmenu-desktop --dmenu="dmenu -i $prompt $lines $font $colors"
+
