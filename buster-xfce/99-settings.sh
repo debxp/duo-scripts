@@ -29,6 +29,9 @@ sudo cp -r artwork/icons/debxp-diversos /usr/share/icons/
 echo -e "Atualizando cachê de ícones..."
 sudo update-icon-caches /usr/share/icons/debxp-paper-folders
 
+echo -e "Copiando temas do Rofi..."
+sudo cp config/rofi/themes/* /usr/share/rofi/themes/
+
 # Scripts diversos
 
 echo -e "Instalando scripts globais..."
