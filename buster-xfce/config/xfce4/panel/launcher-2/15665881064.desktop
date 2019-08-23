@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Anterior
+Comment=
+Exec=debxp-desktop-indicator prev
+Icon=/usr/share/icons/debxp-diversos/ws-left.svg
+Path=
+Terminal=false
+StartupNotify=false

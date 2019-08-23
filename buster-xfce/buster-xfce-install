@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+while true; do
+	clear
+	echo -e "
+Assistente de Instalação - Debian Buster + XFCE 4.12
+------------------------------------------------------------
+   1. Pacotes básicos do sistema
+   2. Base e utilitários do XFCE
+   3. Utilitários de sistema
+   4. Internet
+   5. Firefox Quantum
+   6. Multimídia
+   7. Escritório
+   8. Gráficos
+   9. Desenvolvimento
+  10. Ambiente LAMP + Composer
+  11. Produção Musical
+  12. Virtualização
+  13. Jogos
+------------------------------------------------------------
+   G. Configuração do ambiente gráfico
+   R. Reiniciar a máquina
+   Q. Sair
+------------------------------------------------------------
+Escolha uma opção: \c
+
+"
+	read option
+
+	case $option in
+		1) ./00-pacotes-basicos.sh        ;;
+		2) ./01-base-xfce.sh              ;;
+		3) ./02-sistema.sh                ;;
+		4) ./03-internet.sh               ;;
+		5) ./04-firefox-quantum.sh        ;;
+		6) ./05-multimedia.sh             ;;
+		7) ./06-escritorio.sh             ;;
+		8) ./07-graficos.sh               ;;
+		9) ./08-desenvolvimento.sh        ;;
+	   10) ./09-lamp-composer.sh          ;;
+	   11) ./10-music-production.sh       ;;
+	   12) ./11-virtualizacao.sh          ;;
+	   13) ./12-gaming.sh                 ;;
+	 [gG]) ./99-config.sh                 ;;
+	 [rR]) sudo reboot                    ;;
+	 [qQ]) echo -e "\nSaindo...\n"; exit 0;;
+	esac
+	
+	echo -e "\nTecle 'enter' para continuar... \c"
+	read continue
+	
+done

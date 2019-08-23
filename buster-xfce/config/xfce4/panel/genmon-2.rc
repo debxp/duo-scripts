@@ -1,6 +1,0 @@
-Command=sh -c "$HOME/.local/bin/desktop-indicator show"
-UseLabel=0
-Text=(genmon)
-UpdatePeriod=250
-Font=Open Sans 12
-

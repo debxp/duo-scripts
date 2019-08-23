@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Próximo
+Comment=
+Exec=debxp-desktop-indicator next
+Icon=/usr/share/icons/debxp-diversos/ws-right.svg
+Path=
+Terminal=false
+StartupNotify=false

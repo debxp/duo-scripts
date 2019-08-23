@@ -1,0 +1,6 @@
+Command=debxp-desktop-indicator show
+UseLabel=0
+Text=
+UpdatePeriod=250
+Font=Open Sans Bold 12
+
