@@ -42,7 +42,7 @@ Escolha uma opção: \c
 	   11) ./10-music-production.sh       ;;
 	   12) ./11-virtualizacao.sh          ;;
 	   13) ./12-gaming.sh                 ;;
-	 [gG]) ./99-config.sh                 ;;
+	 [gG]) ./99-settings.sh                 ;;
 	 [rR]) sudo reboot                    ;;
 	 [qQ]) echo -e "\nSaindo...\n"; exit 0;;
 	esac
