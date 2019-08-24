@@ -17,7 +17,7 @@ sudo cp -r $SCRIPT_PATH/artwork/fonts/* /usr/share/fonts/truetype/
 sudo fc-cache -f
 
 echo -e "Criando imagem de usuário..."
-cp $SCRIPT_PATH/artwork/icons/tux.png $HOME/.face
+cp $SCRIPT_PATH/artwork/icons/debxp-diversos/menu-places.svg $HOME/.face
 
 # Temas de ícones
 
