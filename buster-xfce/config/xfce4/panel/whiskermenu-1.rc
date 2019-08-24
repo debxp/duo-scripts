@@ -1,5 +1,5 @@
 favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-mail-reader.desktop,exo-web-browser.desktop
-recent=xfce-wm-settings.desktop,exo-terminal-emulator.desktop,exo-file-manager.desktop,xfce-keyboard-settings.desktop
+recent=xfce-display-settings.desktop,exo-terminal-emulator.desktop,xfce-wm-settings.desktop,exo-file-manager.desktop,xfce-keyboard-settings.desktop
 button-title=Aplicações
 button-icon=/usr/share/icons/debxp-diversos/menu-grid.svg
 button-single-row=false
@@ -21,8 +21,8 @@ position-commands-alternate=true
 position-categories-alternate=false
 stay-on-focus-out=false
 confirm-session-command=true
-menu-width=400
-menu-height=500
+menu-width=381
+menu-height=515
 menu-opacity=85
 command-settings=xfce4-settings-manager
 show-command-settings=true
@@ -44,8 +44,8 @@ command-logout=xfce4-session-logout
 show-command-logout=false
 command-menueditor=menulibre
 show-command-menueditor=true
-command-profile=mugshot
-show-command-profile=false
+command-profile=pcmanfm
+show-command-profile=true
 search-actions=5
 
 [action0]
