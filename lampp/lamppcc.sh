@@ -20,7 +20,7 @@ sudo mysql_secure_installation
 sudo apt install php libapache2-mod-php php-cli php-fpm \
                  php-json php-pdo php-mysql php-zip \
                  php-gd php-mbstring php-curl php-xml \
-                 php-pear php-bcmath
+                 php-pear php-bcmath php-sqlite3
 
 # Composer
 
